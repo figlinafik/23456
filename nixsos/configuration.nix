@@ -20,17 +20,17 @@ networking.hostName = "nixsos"; # Define your hostname.
 # Whether to enable the ACPI daemon.
 services.acpid.enable = true;
 
-  # Select internationalisation properties.
-   i18n = {
-    # consoleFont = "Lat2-Terminus16";
-     consoleFont = "LatGrkCyr-8x16";
-     consoleKeyMap = "us";
-     defaultLocale = "en_US.UTF-8";
-     inputMethod = {
-               enabled = "uim";
+# Select internationalisation properties.
+i18n.defaultLocale = "en_US.UTF-8";
+i18n.inputMethod = {
+          enabled = "ibus";
+          ibus.engines = with pkgs.ibus-engines; [ table uniemoji m17n ];
+        };
+console = {
+     font = "LatGrkCyr-8x16";
+     keyMap = "us";
+     colors = [ "002b36" "dc322f" "859900" "b58900" "268bd2" "d33682" "2aa198" "eee8d5" "002b36" "cb4b16" "586e75" "657b83" "839496" "6c71c4" "93a1a1" "fdf6e3" ]
      };
-   };
-
 # Set your time zone.
 time.timeZone = "Europe/Amsterdam";
 
