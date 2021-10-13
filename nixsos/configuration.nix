@@ -143,6 +143,7 @@ networking.firewall.allowPing = true;
 
 # Enable CUPS to print documents.
 #services.printing.enable = true;
+services.printing.enable = true;
 
 # Whether to run the Postfix mail server.
 services.postfix = {
