@@ -1,5 +1,6 @@
 #!/bin/bash
-
+# this script mounts disks from file "hardware-configuration.nix"
+# creates directories at mount point
 
 mount /dev/disk/by-uuid/2c96685d-8a04-4f82-bd3b-17b125a722e7 /mnt 
 # mkdir /mnt/local
