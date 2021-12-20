@@ -1,0 +1,14 @@
+oot# lsblk -f
+NAME    FSTYPE LABEL                     UUID                                 MO
+sda                                                                           
+├─sda1  vfat   esp                       0F5C-0954                            
+├─sda2  ntfs   dopolnitelno              CC7A201F7A200932                     
+├─sda3  ext4   puppsa                    fb71bba8-dc0d-4bcb-a98c-4fee32abc2ca 
+├─sda4  ext4   easy_r                    8b2da0c5-008d-4d4f-915e-e6926ae7ed3a 
+├─sda5  btrfs  btrfs_h                   3f5e6807-7f61-4939-ada5-4cbe5060c266 
+├─sda6  ext4   pusy                      29bb0acf-0bc8-499a-a6f2-83b8a24986e1 /
+├─sda7  ext4   dogs                      bb4fc0e7-26d6-4ca8-a6b0-8ee2bed3d29b 
+├─sda8  ntfs   windows8 Pro Media Center 4C5CFED4725908A0                     
+├─sda9  btrfs  btrfs_hom                 fe45c0ad-bf5b-4af7-8909-1fb7875ccf24 
+└─sda10 ext4   nix_root                  2c96685d-8a04-4f82-bd3b-17b125a722e7 
+root# 
