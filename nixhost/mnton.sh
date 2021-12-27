@@ -13,4 +13,4 @@ sudo install -d /mnt/tmp /mnt/var/tmp -m 1777
 # mkdir /mnt/boot
 sudo mount /dev/disk/by-uuid/0F5C-0954 /mnt/boot
 sudo install -d /mnt/etc/nixos
-findmnt|grep '/mnt'
+findmnt|grep '─/mnt'
