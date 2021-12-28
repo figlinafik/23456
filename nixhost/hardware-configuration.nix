@@ -8,16 +8,21 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  # boot.initrd.availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" ];
+  # boot.initrd.kernelModules = [ ];
+  # boot.kernelModules = [ "kvm-intel" ];
+  # boot.extraModulePackages = [ ];
   boot={
     initrd={
       supportedFilesystems=[ "btrfs" ];
+      availableKernelModules = [ "xhci_pci" "ehci_pci" "ahci" "usb_storage" "sd_mod" "sr_mod" ];
+      kernelModules = [ ];
     };
     kernelParams = [ "video=VGA-1:800x600@60 video=VGA-2:800x600@60" ];
     resumeDevice="/.swapfile.swap";
+    kernelModules = [ "kvm-intel" ];
+    extraModulePackages = [ config.boot.kernelPackages.nvidia_x11];
+    kernelPackages=pkgs.linuxPackages_5_4;
   };
   powerManagement={
     enable=true;
